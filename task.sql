@@ -46,12 +46,12 @@ INSERT INTO Products (Name, Description, Price, WarehouseAmount)
 INSERT INTO Customers (FirstName, LastName, Email, Address)
 	VALUES ('John', 'Dou', 'j@dou.ua', 'far, far away');
 
+INSERT INTO Orders (CustomerID, Date)
+VALUES (1, '2023-01-01');
 
 
 START TRANSACTION;
 
-INSERT INTO Orders (CustomerID, Date)
-VALUES (1, '2023-01-01');
 
 SET @order_id = LAST_INSERT_ID();
 SET @product_id = 1;
